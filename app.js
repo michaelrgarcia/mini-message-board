@@ -7,8 +7,9 @@ const __dirname = dirname(__filename);
 const assetsPath = join(__dirname, "public");
 const app = express();
 const PORT = 3000;
-app.use("/", indexRouter);
 app.use(express.static(assetsPath));
+app.use(express.urlencoded({ extended: true }));
+app.use("/", indexRouter);
 app.set("views", join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.listen(PORT, () => {
