@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "strict": true
+  }
+}
