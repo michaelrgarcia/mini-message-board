@@ -1,0 +1,28 @@
+body {
+  font-family: "Segoe UI", "system-ui", "-apple-system", sans-serif;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.message {
+  border: 1px solid;
+  padding: 20px;
+
+  max-width: 1280px;
+}
+
+.user {
+  font-weight: bold;
+  font-size: 1.2em;
+
+  margin-top: 10px;
+}
+
+.add-date {
+  font-style: italic;
+}
