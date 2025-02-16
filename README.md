@@ -1,6 +1,6 @@
-# express-ejs-template
+# mini-message-board
 
-A "TypeScript Express server" with ejs as the views engine.
+A message board made usings ejs for views. Messages do not persist.
 
 ## Usage
 
