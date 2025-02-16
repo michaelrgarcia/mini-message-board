@@ -27,4 +27,11 @@ indexRouter.post("/new", (req, res) => {
     });
     res.redirect("/");
 });
+indexRouter.get("/message/:msgIndex", (req, res) => {
+    const matchingMessage = messages[Number(req.params.msgIndex)];
+    if (!matchingMessage)
+        throw Error("Invalid message.");
+    const { text, user, added } = matchingMessage;
+    res.render("message", { message: { author: user, text, added } });
+});
 export default indexRouter;
