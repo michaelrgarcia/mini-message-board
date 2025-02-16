@@ -2,6 +2,10 @@ body {
   font-family: "Segoe UI", "system-ui", "-apple-system", sans-serif;
 }
 
+main {
+  padding-bottom: 30px;
+}
+
 .messages {
   display: flex;
   flex-direction: column;
@@ -27,6 +31,18 @@ body {
   font-style: italic;
 }
 
+button {
+  padding: 5px 15px;
+
+  font-size: 1em;
+
+  cursor: pointer;
+}
+
+.new-msg {
+  margin-top: 25px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -45,5 +61,5 @@ label {
 }
 
 .submit-msg {
-  margin: 20px;
+  margin: 10px;
 }
