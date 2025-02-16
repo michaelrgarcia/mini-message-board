@@ -26,3 +26,24 @@ body {
 .add-date {
   font-style: italic;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  max-width: 225px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.submit-msg {
+  margin: 20px;
+}
