@@ -15,6 +15,11 @@
           <p class="user"><%= messages[i].user %></p>
           <p class="message-text"><%= messages[i].text %></p>
           <p class="add-date"><%= messages[i].added %></p>
+          <a href="message/<%=i%>"
+            ><button type="button" class="view-msg-details">
+              View Details
+            </button></a
+          >
         </div>
         <% } %>
       </div>
