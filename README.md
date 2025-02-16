@@ -1,6 +1,6 @@
 # mini-message-board
 
-A message board made usings ejs for views. Messages do not persist.
+A message board made with Express, TypeScript, and EJS for views. Messages do not persist.
 
 ## Usage
 
