@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Mini Message Board</title>
+  </head>
+  <body>
+    <h1>Message</h1>
+    <div class="msg-details">
+      <span>
+        <p class="msg-detail">From:</p>
+        <p><%= message.author %></p>
+      </span>
+      <span>
+        <p class="msg-detail">Message:</p>
+        <p><%= message.text %></p>
+      </span>
+      <span>
+        <p class="msg-detail">Date Added:</p>
+        <p><%= message.added %></p>
+      </span>
+    </div>
+  </body>
+</html>
