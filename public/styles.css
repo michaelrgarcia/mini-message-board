@@ -63,3 +63,7 @@ label {
 .submit-msg {
   margin: 10px;
 }
+
+.msg-detail {
+  font-weight: bold;
+}
