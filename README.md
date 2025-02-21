@@ -1,9 +1,7 @@
-# express-ejs-template
+# mini-message-board
 
-A "TypeScript Express server" with ejs as the views engine.
+A message board made with Express, TypeScript, and EJS for views. Messages do not persist.
 
 ## Usage
 
 Run `npm i` after cloning. Then, run `npm run start` to start the server.
-
---
