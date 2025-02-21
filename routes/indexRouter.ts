@@ -1,21 +1,12 @@
 import { Router, Request, Response } from "express";
 
+import { getMessageById, getMessages, insertMessage } from "../db/queries.js";
+
 const indexRouter = Router();
 
-const messages = [
-  {
-    text: "hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    text: "hello world",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+indexRouter.get("/", async (req: Request, res: Response) => {
+  const messages = await getMessages();
 
-indexRouter.get("/", (req: Request, res: Response) => {
   res.render("index", { messages: messages });
 });
 
@@ -23,26 +14,22 @@ indexRouter.get("/new", (req: Request, res: Response) => {
   res.render("form");
 });
 
-indexRouter.post("/new", (req: Request, res: Response) => {
+indexRouter.post("/new", async (req: Request, res: Response) => {
   const { msg, user } = req.body;
 
-  messages.push({
-    text: msg,
-    user,
-    added: new Date(),
-  });
+  await insertMessage(user, msg, new Date());
 
   res.redirect("/");
 });
 
-indexRouter.get("/message/:msgIndex", (req: Request, res: Response) => {
-  const matchingMessage = messages[Number(req.params.msgIndex)];
+indexRouter.get("/message/:msgIndex", async (req: Request, res: Response) => {
+  const matchingMessage = await getMessageById(Number(req.params.msgIndex));
 
-  if (!matchingMessage) throw Error("Invalid message.");
+  const { text, username, added } = matchingMessage;
 
-  const { text, user, added } = matchingMessage;
-
-  res.render("message", { message: { author: user, text, added } });
+  res.render("message", {
+    message: { author: username, text, added: new Date(added) },
+  });
 });
 
 export default indexRouter;
