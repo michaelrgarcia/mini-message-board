@@ -12,10 +12,10 @@
       <div class="messages">
         <% for (let i = 0; i < messages.length; i++) { %>
         <div class="message">
-          <p class="user"><%= messages[i].user %></p>
+          <p class="user"><%= messages[i].username %></p>
           <p class="message-text"><%= messages[i].text %></p>
           <p class="add-date"><%= messages[i].added %></p>
-          <a href="message/<%=i%>"
+          <a href="message/<%=i + 1%>"
             ><button type="button" class="view-msg-details">
               View Details
             </button></a
